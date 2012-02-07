@@ -25,19 +25,25 @@ def nonBlockingRawInput(prompt='', timeout=1):
 		return False
 
 n = 2
+fp = None
 
-if '-n=' in sys.argv:
-	n = int(arg[3:])
+for arg in sys.argv:
+	if '-n=' in arg:
+		n = int(arg[3:])
+		continue
 
-if '-op=' in arg:
-	fp = open(arg[4:],'a')
+	if '-op=' in arg:
+		fp = open(arg[4:],'a')
+		continue
 	
-if '-h' in arg or '--help' in arg:
-	print "A series of number will keep flashing.\ 
-	If the number that flashed is \
-	the same as the n'th number before it,\
-	press enter"
-	exit()
+	if '-h' in arg or '--help' in arg:
+		print "A series of numbers will keep flashing."+\
+			"If the number that flashed is "+\
+			"the same as the n'th number before it,"+\
+			"press enter. Give -n=Integer as a command line "+\
+			"argument to set n. If you'd like to store stats, "+\
+			"give -op=file"
+		exit()
 
 print str(n) + " back"
 print "Press enter when you find a match"
