@@ -91,11 +91,12 @@ for count in range(30):
 				score = score + 3
 				print ':)'
 			else: 
-				score = score - 1
+				score = score - 2
 				count_wrong = count_wrong + 1
 				print ':('
 		else:
 			if is_match:
+				score = score - 1
 				count_missed = count_missed + 1
 	except IndexError: pass
 	
