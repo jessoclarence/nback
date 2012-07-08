@@ -5,8 +5,8 @@ Read about it here - http://en.wikipedia.org/wiki/N-back
 
 A GUI version is available here - http://brainworkshop.sourceforge.net/
 
-I wanted to something similar on the command line,
-so that I could play one quickly when I want to unwind.
+I wanted something similar on the command line,
+so that I could play quickly when I want to unwind.
 
 Currently, it can be executed as 
 python nback.py -n='value of n' -op='some file name'
