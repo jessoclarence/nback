@@ -6,7 +6,7 @@ import sys
 import datetime
 
 #http://www.garyrobinson.net/2009/10/non-blocking-raw_input-for-python.html
-# The next three functions were taken from the above url
+# The next 15 lines were taken from the above url
 class AlarmException(Exception):
 	pass
 
@@ -98,6 +98,7 @@ for count in range(30):
 			if is_match:
 				score = score - 1
 				count_missed = count_missed + 1
+				print ':('
 	except IndexError: pass
 	
 	time.sleep(0.5)
